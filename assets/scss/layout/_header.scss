@@ -1,0 +1,171 @@
+.header {
+}
+
+
+
+
+.gnb {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4%;
+    height: 68px;
+    align-items: center;
+    background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+    z-index: 10;
+    transition: .5s;
+    @include mobile-2 {
+        height: 41px;
+    }
+    @include mobile {
+        height: 41px;
+    }
+
+
+    &.active {
+        background: rgb(20, 20, 20);
+    }
+    /***********스크롤 내리면 색상 검정으로 변경************/
+
+
+
+    .gnb-left {
+        display: flex;
+    }
+    .main-logo {
+        margin-right: 25px;
+        font-size: 25px;
+        color: #e50914;
+        @include tablet {
+            margin-right: 5px;
+        }
+        @include mobile-2 {
+            margin-right: 5px;
+        }
+        @include mobile {
+            margin-right: 5px;
+        }
+        img {
+            @include mobile-2 {
+                scale:0.7
+            }
+            @include mobile {
+                scale:0.7
+            }
+        }
+    }
+    .menu-list {
+        display: flex;
+        align-items: center;
+        @include mobile {
+            display: none;
+        }
+        .menu-item {
+            margin-left: 18px;
+        }
+        a {
+            display: block;
+            height: 100%;
+            color:#fff;
+            font-size: .85vw;
+        }
+    }
+    //모바일 메뉴 리스트
+    .mobile-gnb {
+        display: none;
+        @include mobile {
+            display: block;
+            position: relative;
+        }
+        .m-menu-btn {
+            margin-left: 18px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: #fff;
+            font-size: 1vw;
+            &::after {
+                border-color: #fff transparent transparent;
+                border-style: solid;
+                border-width: 5px 5px 0;
+                content: "";
+                height: 0;
+                margin-left: 5px;
+                width: 0;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    .gnb-right {
+    }
+    .my-list {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+    .my-item {
+        margin-right: 10px;
+        a {
+            display: block;
+            height: 100%;
+        }
+        svg {
+            color: #fff;
+        }
+        &.search-btn {}
+        &.kids-btn {
+            font-size: 14px;
+            color: #fff;
+            @include tablet {
+                display: none;
+            }
+            @include mobile-2 {
+                display: none;
+            }
+            @include mobile {
+                display: none;
+            }
+        }
+        &.alarm-btn {}
+        &.my-btn {
+            margin-right: 0;
+            a {
+                display: flex;
+                align-items: center;
+            }
+            .profile {
+                img {
+                    border-radius: 4px;
+                }
+            }
+            .more {
+                border-color: #fff transparent transparent;
+                border-style: solid;
+                border-width: 5px 5px 0;
+                height: 0;
+                margin-left: 10px;
+                transition: transform 367ms cubic-bezier(.21,0,.07,1);
+                width: 0;
+                @include mobile-2 {
+                    display: none;
+                }
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}

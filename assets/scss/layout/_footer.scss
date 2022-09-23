@@ -1,0 +1,63 @@
+.footer {
+    color: grey;
+    margin: 20px auto 0;
+    max-width: 980px;
+    padding: 50px 4% 0;
+    .footer-inner {}
+
+
+
+
+    .sns-link {
+        margin-bottom: 1em;
+        a {
+            margin-right: 15px;
+        }
+        svg {
+            color: #fff;
+        }
+    }
+
+
+
+
+    .member-list {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        font-size: 13px;
+        margin: 0 0 14px;
+        .member-item {
+            flex-basis: 25%;
+            margin-bottom: 16px;
+            @include mobile {
+                flex-basis: 50%;
+            }
+        }
+    }
+
+
+
+
+    .service-btn {
+        button {
+            font-size: 13px;
+            margin-bottom: 20px;
+            padding: 0.5em;
+            background: transparent;
+            border: 1px solid grey;
+        
+        }
+    }
+
+
+
+
+    .copy {
+        font-size: 11px;
+        margin-bottom: 15px;
+        .copy-txt+.copy-txt {
+            margin-top: 4px;
+        }
+    }
+}
